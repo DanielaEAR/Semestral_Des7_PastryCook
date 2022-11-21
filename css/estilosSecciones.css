@@ -16,4 +16,11 @@
     border-radius: 6px;
   }
 /*------------FOOTER-----------*/
-
+.footer{
+    background-color: rgb(232, 212, 233);
+    display: flex;
+    justify-content: right;
+}
+.footerImg{
+    width: 25%;
+}

@@ -16,5 +16,38 @@ h5{
     display: flex;
     justify-content: center;
     margin: 50px;
-    margin-top: 100px;
+    margin-top: 80px;
+}
+.contenedorBtnR{
+    display: flex;
+    justify-content: center;
+}
+.btnRegistrar{
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(8, 180, 123);
+    border-color: rgb(255, 255, 255);
+    border-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.contenedor2{
+    display: flex;
+    justify-content: center;
+}
+.contenedorImg{
+    margin: auto;
+    height: 25%;
+}
+.contenedorDescrip{
+    margin-top: 150px;
+    margin-right: 50px;
+    height: 25%;
+}
+.descripcion{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
 }

@@ -26,27 +26,33 @@
             </div>
         </div>
     </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="divTitulo">
+            <h4 class="tituloNav">Registro</h4>
+    </nav>
     <br><br>
-    <div class="bannerInfo">
-        <h1> ¡Comparte tu receta especial! </h1>
-        <h5> En Pastry Cook, podrás compartir y encontrar recetas para hacer tus postres favoritos </h5>
+    <div class="iconoR">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg>
     </div>
-    <br><br>
-    <div class="contenedorBtnR">
-        <a href="registro.php" target="_parent"><button class="btnRegistrar">¡Regístrate Aquí!</button></a>
-    </div>
-    <div class="bannerImg">
-        <img class="imgbanner" src="img/banners/bannerImg.png"> 
-    </div>
-    <div class="contenedor2">
-        <div class="contenedorImg">
-            <img src="img/logo/logo2.1.png">
-        </div>
-        <div class="contenedorDescrip">
-            <p class="descripcion">Pastry Cook te ofrece la oportunidad de poder compartir con el mundo tus dulces recetas,
-               al igual que también podrás encontrar recetas de otras personas que al igual que tú,
-               quieren dar a conocer sus diferentes y variadas recetas de postres.
-            </p>
+    <div class="formularioR">
+        <div class="formularioR2">
+            <div class="input1">
+                <h6 class="inputTexto">Usuario</h6>
+                <input type="text" class="form-control" id="input" placeholder="Username" aria-label="Username">
+            </div>
+            <div class="input1">
+                <h6 class="inputTexto">Correo</h6>
+                <input type="text" class="form-control" id="input" placeholder="Email" aria-label="Username">
+            </div>
+            <div class="input1">
+                <h6 class="inputTexto">Contraseña</h6>
+                <input type="text" class="form-control" id="input" placeholder="Password" aria-label="Username">
+            </div>
+            <div class="contBtnR">
+                <a href="acceder.php" target="_parent"><button class="btnR">Registrarse</button></a>
+            </div>
         </div>
     </div>
 <?php

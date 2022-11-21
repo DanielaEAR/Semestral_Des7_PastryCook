@@ -1,0 +1,22 @@
+.nav2{
+    background-color: rgb(240, 225, 252);
+}
+.tituloNavIni{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.subContBtnR{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spanAcceder{
+    margin-top: 25px;
+}
+.irRegistro{
+    color: rgb(14, 66, 70);
+    
+}
+.irRegistro:hover{
+    color: rgb(255, 255, 255);
+}

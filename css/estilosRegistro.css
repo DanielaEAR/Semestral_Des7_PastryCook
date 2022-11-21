@@ -1,0 +1,62 @@
+#divTitulo{
+    display: flex;
+    justify-content: center;
+}
+.tituloNav{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.iconoR{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+.formularioR{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    margin-bottom: 100px;
+}
+.formularioR2{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(127, 233, 215);
+    padding: 50px;
+    border-radius: 10px;
+}
+#input{
+    width: 100%;
+    margin-bottom: 25px;
+}
+.inputTexto{
+    color: white;
+    font-style:italic;
+    font-family: 'Montserrat', sans-serif;
+}
+.contBtnR{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.btnR{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); 
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.btnR:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(66, 114, 116);
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
