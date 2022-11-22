@@ -28,6 +28,14 @@ p{
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
 }
+.campoImg{
+    display: flex;
+    justify-content: center;
+}
+.imgR{
+    border-radius: 30px;
+    box-shadow:  2px 3px 5px rgb(161, 157, 161);
+}
 .camposInfo{
     margin: 15px;
     margin-top: 10px;

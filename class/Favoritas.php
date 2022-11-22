@@ -24,7 +24,7 @@ class Favoritas extends modeloCredencialesBD{
             $this->_db->close();
         }
     }
-    public function mostrar_UnaFavorito($id_R){
+/*     public function mostrar_UnaFavorito($id_R){
         $instruccion = "CALL sp_mostrarUnFavorito($id_R)";
         $consulta = $this->_db->query($instruccion);
         $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
@@ -36,7 +36,7 @@ class Favoritas extends modeloCredencialesBD{
             $resultado->close();
             $this->_db->close();
         }
-    }
+    } */
     public function agregar_favoritos($id_R, $id_U){
         $instruccion = "CALL sp_agregarFavoritos(".$id_R.",". $id_U.")";
         $consulta = $this->_db->query($instruccion);
@@ -51,4 +51,4 @@ class Favoritas extends modeloCredencialesBD{
         }
     }
 }
-<?
+?>
