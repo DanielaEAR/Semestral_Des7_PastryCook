@@ -13,10 +13,23 @@ class Usuario extends modeloCredencialesBD{
         parent::__construct();
        
     }
-    public function validar_Usuario($username, $contraseña){
-        $instruccion = "CALL sp_validarUsuario('".$username."','".$contraseña."')";
+    public function validar_Auth($username){
+        $instruccion = "CALL sp_validarAuth('".$username."')";
         $consulta = $this->_db->query($instruccion);
         $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
+
+        if(!$resultado){
+            print("<script> alert('Fallo al validar usuario'); </script>");
+        }else{
+            return $resultado;
+            $resultado->close();
+            $this->_db->close();
+        }
+    }
+    public function validar_Usuario($username){
+        $instruccion = "CALL sp_validarUsuario('".$username."')";
+        $consulta = $this->_db->query($instruccion);
+        $resultado = $consulta;
 
         if(!$resultado){
             print("<script> alert('Fallo al validar usuario'); </script>");
@@ -42,12 +55,10 @@ class Usuario extends modeloCredencialesBD{
     public function  registrar_Usuario($username, $email, $contraseña){
         $instruccion = "CALL sp_registrarUsuario('".$username."','".$email."','".$contraseña."')";
         $consulta = $this->_db->query($instruccion);
-        $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
+        $resultado = $consulta;
 
         if(!$resultado){
-
             print("<script> alert('Fallo al registrar Usuario'); </script>");
-
         }else{
             return $resultado;
             $resultado->close();
@@ -57,12 +68,10 @@ class Usuario extends modeloCredencialesBD{
     public function  editar_Usuario($id_U, $username, $email, $contraseña){
         $instruccion = "CALL sp_editarUsuario(".$id_U.",'".$username."','".$email."','".$contraseña."')";
         $consulta = $this->_db->query($instruccion);
-        $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
+        $resultado = $consulta;
 
         if(!$resultado){
-
             print("<script> alert('Fallo al editar Usuario'); </script>");
-
         }else{
             return $resultado;
             $resultado->close();

@@ -49,6 +49,7 @@
             </p>
         </div>
     </div>
+    <br><br><br><br><br><br><br><br><br>
 <?php
     include("Secciones/footer.php");
 ?>

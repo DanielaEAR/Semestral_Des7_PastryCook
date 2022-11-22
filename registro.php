@@ -36,25 +36,30 @@
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
         </svg>
     </div>
-    <div class="formularioR">
-        <div class="formularioR2">
-            <div class="input1">
-                <h6 class="inputTexto">Usuario</h6>
-                <input type="text" class="form-control" id="input" placeholder="Username" aria-label="Username">
-            </div>
-            <div class="input1">
-                <h6 class="inputTexto">Correo</h6>
-                <input type="text" class="form-control" id="input" placeholder="Email" aria-label="Username">
-            </div>
-            <div class="input1">
-                <h6 class="inputTexto">Contraseña</h6>
-                <input type="text" class="form-control" id="input" placeholder="Password" aria-label="Username">
-            </div>
-            <div class="contBtnR">
-                <a href="acceder.php" target="_parent"><button class="btnR">Registrarse</button></a>
+    <form action="validarRegistro.php" method="POST">
+        <div class="formularioR">
+            <div class="formularioR2">
+                <div class="input1">
+                    <h6 class="inputTexto">Usuario</h6>
+                    <input type="text" name="username" class="form-control" id="input" placeholder="Username" aria-label="Username">
+                </div>
+                <div class="input1">
+                    <h6 class="inputTexto">Correo</h6>
+                    <input type="email" name="email" class="form-control" id="input" 
+                        placeholder="Email@example.com" aria-label="Username"
+                        pattern="[a-zA-Z0-9!#$%&'*_+-]([\.]?[a-zA-Z0-9!#$%&'*_+-])+@[a-zA-Z0-9]([^@&%$\/()=?¿!.,:;]|\d)+[a-zA-Z0-9][\.][a-zA-Z]{2,4}([\.][a-zA-Z]{2})?"
+                    >
+                </div>
+                <div class="input1">
+                    <h6 class="inputTexto">Contraseña</h6>
+                    <input type="password" name="password" class="form-control" id="input" placeholder="Password" aria-label="Username">
+                </div>
+                <div class="contBtnR">
+                    <button class="btnR">Registrarse</button></a>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 <?php
     include("Secciones/footer.php");
 ?>

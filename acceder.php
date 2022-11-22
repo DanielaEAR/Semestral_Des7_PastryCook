@@ -1,5 +1,6 @@
 <?php
     include("Secciones/header.php");
+   
 ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container-fluid">
@@ -36,24 +37,26 @@
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
         </svg>
     </div>
-    <div class="formularioR">
-        <div class="formularioR2">
-            <div class="input1">
-                <h6 class="inputTexto">Usuario</h6>
-                <input type="text" class="form-control" id="input" placeholder="Username" aria-label="Username">
-            </div>
-            <div class="input1">
-                <h6 class="inputTexto">Contraseña</h6>
-                <input type="text" class="form-control" id="input" placeholder="Password" aria-label="Username">
-            </div>
-            <div class="contBtnR">
-                <div class="subContBtnR">
-                    <a href="acceder.php" target="_parent"><button class="btnR">Iniciar Sesión</button></a>
-                    <span class="spanAcceder">¿No tienes cuenta?</span><a class="irRegistro" href="registro.php">¡Regístrate!</a>
+    <form action="validarAcceso.php" method="POST">
+        <div class="formularioR">
+            <div class="formularioR2">
+                <div class="input1">
+                    <h6 class="inputTexto">Usuario</h6>
+                    <input type="text" name="username" class="form-control" id="input" placeholder="Username" aria-label="Username">
+                </div>
+                <div class="input1">
+                    <h6 class="inputTexto">Contraseña</h6>
+                    <input type="password" name="password" class="form-control" id="input" placeholder="Password" aria-label="Password">
+                </div>
+                <div class="contBtnR">
+                    <div class="subContBtnR">
+                        <button class="btnR">Iniciar Sesión</button></a>
+                        <span class="spanAcceder">¿No tienes cuenta?</span><a class="irRegistro" href="registro.php">¡Regístrate!</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 
     
 <?php

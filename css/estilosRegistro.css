@@ -60,3 +60,15 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+/*Validación de patrón del email*/
+input {
+    border: solid 2px lightgrey;
+    border-radius: 5px;
+    outline: none;
+  }
+input[pattern]:focus:invalid  {
+      border-color: red;
+  }
+input[pattern]:focus:valid  {
+      border-color: blue;
+  }
