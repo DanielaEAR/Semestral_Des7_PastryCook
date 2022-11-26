@@ -24,8 +24,6 @@ class Recetas extends modeloCredencialesBD{
 
         if(!$resultado){
 
-            print("<script> alert('Fallo al consultar las recetas'); </script>");
-
         }else{
             return $resultado;
             $resultado->close();
@@ -45,13 +43,14 @@ class Recetas extends modeloCredencialesBD{
             $this->_db->close();
         }
     }
-    public function filtrar_Receta($condiCampo, $id_P, $id_D){//falta este sp
-        $instruccion = "CALL sp_filtrarReceta('".$condiCampo."', ".$id_P.", ".$id_D.")";
+    public function filtrar_Receta($buscar, $id_P, $id_D){
+    
+        $instruccion = "CALL sp_filtrarReceta('".$buscar."', ".$id_P.", ".$id_D.")";
         $consulta = $this->_db->query($instruccion);
         $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
 
         if(!$resultado){
-            print("<script> alert('Fallo al consultar la receta'); </script>");
+
         }else{
             return $resultado;
             $resultado->close();

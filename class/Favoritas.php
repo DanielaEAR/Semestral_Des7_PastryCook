@@ -17,7 +17,7 @@ class Favoritas extends modeloCredencialesBD{
         $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
 
         if(!$resultado){
-            print("<script> alert('Fallo al mostrar recetas favoritas'); </script>");
+    
         }else{
             return $resultado;
             $resultado->close();
