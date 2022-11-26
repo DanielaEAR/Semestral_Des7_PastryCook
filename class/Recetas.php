@@ -96,8 +96,8 @@ class Recetas extends modeloCredencialesBD{
             $this->_db->close();
         }
     }
-    public function eliminar_Receta($id_R, $id_U){
-        $instruccion = "CALL sp_eliminarReceta(".$id_R.",".$id_U.")";
+    public function eliminar_Receta($id_R){
+        $instruccion = "CALL sp_eliminarReceta(".$id_R.")";
         $consulta = $this->_db->query($instruccion);
         $resultado = $consulta;
 

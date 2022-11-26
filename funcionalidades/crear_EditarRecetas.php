@@ -1,6 +1,8 @@
 <?php
     include("../Secciones/headerPrincipal.php");
-    include("../class/Favoritas.php");
+    include("../class/Recetas.php");
+    include("../class/TipoPostre.php");
+    include("../class/DificultadReceta.php");
     $id_Usuario = 0; //cambiar dependiendo del usuario
 ?>   
     <br><br>
@@ -9,33 +11,75 @@
     <div class="tarjetaRecetaPadre">
         <div class="tarjetaRecetaHija">
             <br>
-            <div class="headerTarjeta">
-                <input type="text">
+            <div class="headerTarjetaCrear">
+                <p>Título</p>
+                <input class="campoTitulo" type="text">
             </div>
             <br>
             <div class="camposTarjeta">
-                <h5>Ingredientes</h5>
-                <hr>
+                <p>Ingredientes</p>
                 <div class="campoIngr">
-                    <input type="text">
+                    <textarea class="campoIngr" name="" id="" cols="50" rows="5"></textarea>
                 </div>
                 <br>
-                <h5>Descripción</h5>
-                <hr>
+                <p>Descripción</p>
                 <div class="campoDescr">
-                    <input type="text">
+                <textarea class="campoDescrip" name="" id="" cols="50" rows="10"></textarea>
                 </div>
-                <br><br>
-                <div class="campoImg">
-                    <input type="text">
+                <br>
+                <div class="campoImgC">
+                    <p>Imágen (Opcional) </p>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <label class="input-group-text" for="inputGroupFile02">Cargar</label>
+                    </div>
                 </div>
             </div>
-            <div class="camposInfo">
-                <hr>
-                <div class="info">
-                    <span><b>Categoría:</b> <?php //print($resuVerRecetas['postre']) ?> </span>
-                    <span><b>Nivel:</b> <?php //print($resuVerRecetas['tipoDificultad']) ?> </span>
+           
+            <div class="camposInfoCrear">
+                <div class="infoCrear">
+                    <div class="dropsCrear">
+                        <span>Tipo de Categoría </span>
+                        <SELECT class="dropC" name="catego">
+                        <OPTION value="0" SELECTED>Categoría
+                        <?php
+                            $obj_tipoP = new TipoPostre();
+                            $tipoP = $obj_tipoP->consultar_tiposPostre();
+                            $nfilas=count($tipoP);
+
+                            if($nfilas > 0){
+                                foreach($tipoP as $resultado){
+                                    print("<OPTION value='".$resultado['id_P']."'>".$resultado['postre']."<br>");
+                                }             
+                        ?>
+                        </SELECT>
+                        <?php
+                            }
+                        ?>
+                    </div>
+                    <div class="dropsCrear">
+                        <span>Nivel</span>
+                        <SELECT class="dropC" name="Dificultad">
+                        <OPTION value="0" SELECTED>Dificultad
+                        <?php
+                            $obj_tipoD = new DificultadReceta();
+                            $tipoD = $obj_tipoD->consultar_tiposDificultad();
+                            $nfilas=count($tipoD);
+
+                            if($nfilas > 0){
+                                foreach($tipoD as $resultadoD){
+                                    print("<OPTION value='".$resultadoD['id_D']."'>".$resultadoD['tipoDificultad']."<br>");
+                                }             
+                        ?>
+                        </SELECT>
+                        <?php
+                            }
+                        ?>
+                    </div>
                 </div>
+            </div>
+            <div class="tarjetaBtn">
+                <button type="submit" class="btnEnviar">Enviar</button> </a>
             </div>
         </div>
     </div>

@@ -7,6 +7,7 @@
     <!-- BOOSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- CSS only -->
+    <link href="http://localhost/SemestralFinal/css/estilosPerfil.css" rel="stylesheet">
     <link href="http://localhost/SemestralFinal/css/estilosFiltrarB.css" rel="stylesheet">
     <link href="http://localhost/SemestralFinal/css/estilosVerReceta.css" rel="stylesheet">
     <link href="http://localhost/SemestralFinal/css/estilosPrincipal.css" rel="stylesheet">

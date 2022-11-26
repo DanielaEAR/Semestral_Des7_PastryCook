@@ -102,3 +102,50 @@ h4{
     background-color: rgb(21, 182, 168);
     color: azure;
 }
+
+/*   Parte del css que pertenece a la crear_EditarRecetas.php   */
+.headerTarjetaCrear{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.campoTitulo{
+    border-radius: 5px;
+    border-color: rgb(228, 20, 124);
+    border-width: 1px;
+    width: 30%;
+}
+.infoCrear{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    margin-bottom: 8px;
+}
+.dropC{
+    border-radius: 6px;
+    border-color: rgb(228, 20, 124);
+    border-width: 1px;
+}
+.campoIngr{
+    border-radius: 5px;
+    border-color: rgb(228, 20, 124);
+    border-width: 1px;
+    width: 100%;
+}
+.campoDescrip{
+    border-radius: 5px;
+    border-color: rgb(228, 20, 124);
+    border-width: 1px;    
+    width: 100%;
+}
+.campoImgC{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btnEnviar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
