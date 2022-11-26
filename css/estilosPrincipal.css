@@ -36,11 +36,12 @@ a{
 .iconoF{
     margin-right: 2%;
     margin-top: 6px;
-    color: rgb(189, 65, 183);
+    color: rgb(184, 51, 133);
+    border-color: black;
 }
 a:hover{
     text-decoration: none;
-    color: rgb(110, 16, 106);
+    color: rgb(255, 200, 80);
 }
 .sub2{
     margin: 2%;
@@ -52,4 +53,52 @@ h4{
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
+}
+/*   Parte del css que pertenece a la MisRecetas.php   */
+.subCrear{
+    margin-left: 20px;
+    margin-bottom: 10px;  
+}
+.btnCrear{
+    width: 13%;
+    height: 50px;
+    border: 1px;
+    border-style:double;
+    border-radius: 20px;
+    border-color: rgb(21, 182, 168);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+.btnCrear:hover{
+    background-color: rgb(40, 192, 179);
+    color: white;
+}
+#iconoCrear{
+    margin: 3px;
+    color: rgb(144, 231, 224);
+}
+.sub3{
+    display: flex;
+}
+.subEditar{
+    width: 100%;
+    height: 100%;
+}
+.btnEditar{
+    width: 100%;
+    border: 1px;
+    background-color: black;
+    color: azure;
+}
+.subEliminar{
+    width: 100%;
+    height: 100%;
+}
+.btnEliminar{
+    width: 100%;
+    border: 1px;
+    background-color: rgb(21, 182, 168);
+    color: azure;
 }

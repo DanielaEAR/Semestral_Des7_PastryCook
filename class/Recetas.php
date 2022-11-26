@@ -43,6 +43,19 @@ class Recetas extends modeloCredencialesBD{
             $this->_db->close();
         }
     }
+    public function mostrar_MiReceta($id_U){
+        $instruccion = "CALL sp_mostrarMisRecetas($id_U)";
+        $consulta = $this->_db->query($instruccion);
+        $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
+
+        if(!$resultado){
+
+        }else{
+            return $resultado;
+            $resultado->close();
+            $this->_db->close();
+        }
+    }
     public function filtrar_Receta($buscar, $id_P, $id_D){
     
         $instruccion = "CALL sp_filtrarReceta('".$buscar."', ".$id_P.", ".$id_D.")";
