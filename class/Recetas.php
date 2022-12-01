@@ -83,8 +83,8 @@ class Recetas extends modeloCredencialesBD{
             $this->_db->close();
         }
     }
-    public function editar_Receta($id_R, $id_U, $titulo, $ingre, $descrip, $img, $id_P, $id_D){
-        $instruccion = "CALL sp_editarReceta(".$id_R.",".$id_U.",'".$titulo."','".$ingre."','".$descrip."','".$img."',".$id_P.",".$id_D.")";
+    public function editar_Receta($id_R, $titulo, $ingre, $descrip, $img, $id_P, $id_D){
+        $instruccion = "CALL sp_editarReceta(".$id_R.",'".$titulo."','".$ingre."','".$descrip."','".$img."',".$id_P.",".$id_D.")";
         $consulta = $this->_db->query($instruccion);
         $resultado = $consulta;
 

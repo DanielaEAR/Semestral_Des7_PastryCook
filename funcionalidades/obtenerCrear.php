@@ -1,0 +1,32 @@
+<?php
+require_once('../class/Recetas.php');
+
+//falta validaciones con la imagen
+//falta la sesión del usuario
+    
+    if(array_key_exists('titulo', $_POST)  && array_key_exists('ingr', $_POST) &&
+        array_key_exists('descr', $_POST)  && array_key_exists('catego', $_POST) &&
+        array_key_exists('Dificultad', $_POST)){
+        
+        if($_REQUEST['titulo'] == "" || $_REQUEST['ingr'] == "" || $_REQUEST['descr'] == "" ||
+           $_REQUEST['catego'] == 0 || $_REQUEST['Dificultad'] == 0){
+
+            print("<script> alert('Campos en Blanco'); </script>");
+            print("<script type='text/javascript'> window.location.href = 'crearReceta.php'; </script>");               
+        }else{
+            $obj_crearR = new Recetas();
+            $crearReceta = $obj_crearR->crear_Receta($_REQUEST['id_U'], $_REQUEST['titulo'], $_REQUEST['ingr'], $_REQUEST['descr'], 
+                                                    "", $_REQUEST['catego'], $_REQUEST['Dificultad']);
+            if($crearReceta > 0){
+            //Se ingresó correctamente
+                print("<script> alert('Se Actualizó correctamente'); </script>");
+                //Reedirecciona hacia la página principal de gestión de actividades
+                print("<script type='text/javascript'> window.location.href = 'misRecetas.php'; </script>");
+            }
+        }
+    }else{
+        print("<script> alert('Error en la creación de la receta, inténtelo de nuevo'); </script>");
+        print("<script type='text/javascript'> window.location.href = 'crearReceta.php' </script>");
+    }
+
+?>

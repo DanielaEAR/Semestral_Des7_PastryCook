@@ -30,7 +30,7 @@
                 <hr>
                 <div class="campoIngr">
                     <p>
-                        <?php print($resuVerRecetas['ingredientes']) ?>
+                        <?php print(nl2br($resuVerRecetas['ingredientes'])) ?>
                     </p>
                 </div>
                 <br>
@@ -38,13 +38,12 @@
                 <hr>
                 <div class="campoDescr">
                     <p>
-                        <?php print($resuVerRecetas['descripción']) ?>
+                        <?php print(nl2br($resuVerRecetas['descripción'])) ?>
                     </p>
                 </div>
                 <br><br>
                 <div class="campoImg">
-                    <?php //print($resuVerRecetas['imagen']) ?>
-                    <img class="imgR" src="../img/imgRecetas/cupcake.jfif" alt="" width="300" >
+                    <img class="imgR" src="<?php print($resuVerRecetas['imagen']) ?>" alt="" width="300" >
                 </div>
             </div>
             <div class="camposInfo">
