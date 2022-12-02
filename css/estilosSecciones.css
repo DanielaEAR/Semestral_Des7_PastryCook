@@ -69,3 +69,16 @@ body {
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
 }
+
+/*------------HEADER PERFIL-----------*/
+
+.navPerfil{
+    background-color: rgb(53, 51, 51);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+#iconoPer{
+    color: white;
+    margin: 10px;
+}

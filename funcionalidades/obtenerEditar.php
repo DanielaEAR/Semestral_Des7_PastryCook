@@ -1,6 +1,8 @@
 <?php
 require_once('../class/Recetas.php');
-    $usuario = "dear";
+
+    $usuario = "dear"; // validar con la sesión
+
     $file_get = $_FILES['imagePostre']['name'];
     $temp = $_FILES['imagePostre']['tmp_name'];
 

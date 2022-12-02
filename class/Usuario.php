@@ -19,7 +19,7 @@ class Usuario extends modeloCredencialesBD{
         $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
 
         if(!$resultado){
-            print("<script> alert('Fallo al validar usuario'); </script>");
+
         }else{
             return $resultado;
             $resultado->close();

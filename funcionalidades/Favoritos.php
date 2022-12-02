@@ -1,7 +1,9 @@
 <?php
+    session_start();
     include("../Secciones/headerPrincipal.php");
     include("../class/Favoritas.php");
-    $id_Usuario = 0; //cambiar dependiendo del usuario
+    
+    $id_Usuario = $_SESSION['logged_in_user_id'];
 ?>
     <br><br>
     <h2> Mis Favoritos </h2>

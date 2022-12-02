@@ -1,10 +1,11 @@
 <?php
+    session_start();
     include("../Secciones/headerPrincipal.php");
     include("../class/Recetas.php");
     include("../class/TipoPostre.php");
     include("../class/DificultadReceta.php");
-
-    $id_Usuario = 0; //cambiar dependiendo del usuario
+    
+    $id_Usuario = $_SESSION['logged_in_user_id']; //cambiar dependiendo del usuario
     
 ?>   
     <br><br>
@@ -12,28 +13,29 @@
     <br><br>
     <div class="tarjetaRecetaPadre">
         <div class="tarjetaRecetaHija">
-            <form name="formCrear" method="post" action="obtenerCrear.php">
+            <form name="formCrear" method="post" action="obtenerCrear.php" enctype="multipart/form-data">
+                <input type='hidden' name='id_U' value="<?php print($id_Usuario) ?>">
                 <br>
                 <div class="headerTarjetaCrear">
                     <p>Título</p>
-                    <input class="campoTitulo" type="text">
+                    <input class="campoTitulo" name="titulo" type="text">
                 </div>
                 <br>
                 <div class="camposTarjeta">
                     <p>Ingredientes</p>
                     <div class="campoIngr">
-                        <textarea class="campoIngr" name="" id="" cols="50" rows="5"></textarea>
+                        <textarea class="campoIngr" name="ingr" id="" cols="50" rows="5"></textarea>
                     </div>
                     <br>
                     <p>Descripción</p>
                     <div class="campoDescr">
-                        <textarea class="campoDescrip" name="" id="" cols="50" rows="10"></textarea>
+                        <textarea class="campoDescrip" name="descr" id="" cols="50" rows="10"></textarea>
                     </div>
                     <br>
                     <div class="campoImgC">
                         <p>Imágen (Opcional) </p>
                         <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <input name="imagePostre" type="file" class="form-control" id="inputGroupFile02">
                             <label class="input-group-text" for="inputGroupFile02">Cargar</label>
                         </div>
                     </div>

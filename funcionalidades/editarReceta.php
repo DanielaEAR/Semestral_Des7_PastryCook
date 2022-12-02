@@ -4,7 +4,6 @@
     include("../class/TipoPostre.php");
     include("../class/DificultadReceta.php");
 
-    $id_Usuario = 0; //cambiar dependiendo del usuario
     $idReceta = $_GET['idR'];
 
 ?>   

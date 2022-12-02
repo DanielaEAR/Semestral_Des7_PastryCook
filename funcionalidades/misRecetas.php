@@ -1,7 +1,9 @@
 <?php
+    session_start();
     include("../Secciones/headerPrincipal.php");
     include("../class/Recetas.php");
-    $id_Usuario = 1; //cambiar dependiendo del usuario
+
+    $id_Usuario = $_SESSION['logged_in_user_id'];
 ?>   
     <br><br>
     <h2> Mis Recetas </h2>
