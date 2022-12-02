@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(isset($_SESSION['logged_in_user_id']) == "" && isset($_SESSION['logged_in_user_name']) == ""){
+        print("<script type='text/javascript'> window.location.href = '../acceder.php'; </script>");
+    }else{
     include("../Secciones/headerPrincipal.php");
     include("../class/Recetas.php");
 
@@ -77,6 +80,7 @@
     <br><br><br><br><br><br><br><br><br>
 <?php
     include("../Secciones/footerPrincipal.php");
+}
 ?>
 </body>
 </html>
