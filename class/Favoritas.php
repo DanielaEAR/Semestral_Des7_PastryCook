@@ -24,26 +24,27 @@ class Favoritas extends modeloCredencialesBD{
             $this->_db->close();
         }
     }
-/*     public function mostrar_UnaFavorito($id_R){
-        $instruccion = "CALL sp_mostrarUnFavorito($id_R)";
+    public function agregar_favoritos($id_R, $id_U){
+        $instruccion = "CALL sp_agregarFavoritos(".$id_R.",". $id_U.")";
         $consulta = $this->_db->query($instruccion);
-        $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
+        $resultado = $consulta;
 
         if(!$resultado){
-            print("<script> alert('Fallo al consultar la receta'); </script>");
+            //print("<script> alert('Esta receta ya se encuentra agregada a favoritos'); </script>");
+            return 0;
         }else{
             return $resultado;
             $resultado->close();
             $this->_db->close();
         }
-    } */
-    public function agregar_favoritos($id_R, $id_U){
-        $instruccion = "CALL sp_agregarFavoritos(".$id_R.",". $id_U.")";
+    }
+    public function eliminar_favoritos($id_R, $id_U){
+        $instruccion = "CALL sp_eliminarFavoritos(".$id_R.",". $id_U.")";
         $consulta = $this->_db->query($instruccion);
-        $resultado = $consulta->fetch_all(MYSQLI_ASSOC);
+        $resultado = $consulta;
 
         if(!$resultado){
-            print("<script> alert('Fallo al agregar la receta a favoritos'); </script>");
+            print("<script> alert('Fallo al eliminar la receta de favoritos'); </script>");
         }else{
             return $resultado;
             $resultado->close();

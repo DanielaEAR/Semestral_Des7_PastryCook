@@ -39,6 +39,12 @@ a{
     color: rgb(184, 51, 133);
     border-color: black;
 }
+#iconoF2{
+    margin-right: 2%;
+    margin-top: 6px;
+    color: rgb(255, 200, 80);
+    border-color: black;
+}
 a:hover{
     text-decoration: none;
     color: rgb(255, 200, 80);
